@@ -15,12 +15,12 @@ app.use(bodyParser.json());
 
 var apiCall = function(query) {
   request(`https://api.edamam.com/search?q=${query}&app_id=${config.APPID}&app_key=${config.APIKEY}`, function(error, response, body) {
-    console.log('body:', body);
+    console.log('body.recipe:', body.recipe);
   })
 };
 
 app.get('/items', function (req, res) {
- 
+  
 
 });
 

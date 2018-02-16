@@ -11,21 +11,18 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    $.ajax({
-      url: '/items', 
-      success: (data) => {
-        this.setState({
-          items: data
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
-  }
+  // componentDidMount() {
+  //   $.get('/items', 
+  //     function(data) {
+  //       console.log('data:', data);
+  //     }
+  //   })
+  //    .fail(function() {
+  //      console.log('error');
+  //   })
+  // }
 
-  render () {
+  render() {
     return (<div>
       <h1>Item List</h1>
       <List items={this.state.items}/>
